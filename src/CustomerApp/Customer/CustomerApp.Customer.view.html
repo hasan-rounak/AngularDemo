@@ -1,0 +1,19 @@
+<h1>Wlecome to {{title}}</h1><br/>
+Customer Code: <input [(ngModel)]="customer.CustomerCode" type="text"/><br/>
+Customer Name: <input [(ngModel)]="customer.CustomerName" type="text"/><br/>
+Customer Amount: <input [(ngModel)]="customer.CustomerAmount" type="text"/><br/>
+<input type="button" (click)="Add()" value="Add"/><br/><br/>
+<div *ngIf="customers.length!=0">
+<table >
+    <tr>
+        <th> Customer Code</th>
+        <th>Customer Name</th>
+        <th>Customer Amount</th>
+    </tr>
+    <tr *ngFor="let customer of customers">
+        <td>{{customer.CustomerCode}}</td>
+        <td>{{customer.CustomerName}}</td>
+        <td>{{customer.CustomerAmount}}</td>
+    </tr>
+</table>
+</div>
