@@ -1,8 +1,10 @@
 <h1>Wlecome to {{title}}</h1><br/>
-Customer Code: <input [(ngModel)]="customer.CustomerCode" type="text"/><br/>
-Customer Name: <input [(ngModel)]="customer.CustomerName" type="text"/><br/>
-Customer Amount: <input [(ngModel)]="customer.CustomerAmount" type="text"/><br/>
-<input type="button" (click)="Add()" value="Add"/><br/><br/>
+<form [formGroup]="customer.customerFormGroup">
+Customer Code: <input formControlName="CustomerCodeControl" [(ngModel)]="customer.CustomerCode" type="text"/><br/>
+Customer Name: <input formControlName="CustomerNameControl" [(ngModel)]="customer.CustomerName" type="text"/><br/>
+Customer Amount: <input [(ngModel)]="customer.CustomerAmount" [ngModelOptions]="{standalone: true}" type="text"/><br/>
+<input [disabled]="!(customer.customerFormGroup.valid)" type="button" (click)="Add()" value="Add"/><br/><br/>
+</form>
 <div *ngIf="customers.length!=0">
 <table >
     <tr>
