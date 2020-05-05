@@ -19,15 +19,18 @@
   <button type="submit" class="btn btn-primary" (click)="Add()" [disabled]="!(customer.customerFormGroup.valid)">Submit</button>
 </form>
 <div class="mt-4"></div>
-<!-- <div class="alert alert-danger" role="alert">
+ <div *ngIf="customer.customerFormGroup.controls['CustomerCodeControl'].dirty"
+  class="alert alert-danger" role="alert" [hidden]="!(HasError('pattern','CustomerCodeControl'))">
   Customer Code is not in proper format.
 </div>
-<div class="alert alert-danger" role="alert">
+<div *ngIf="customer.customerFormGroup.controls['CustomerCodeControl'].dirty" 
+ class="alert alert-danger" role="alert" [hidden]="!(HasError('required','CustomerCodeControl'))">
   Customer Code is empty.
 </div>
-<div class="alert alert-danger" role="alert">
+<div *ngIf="customer.customerFormGroup.controls['CustomerNameControl'].dirty"
+ class="alert alert-danger" role="alert" [hidden]="!(HasError('required','CustomerNameControl'))">
   Customer Nmae is empty.
-</div> -->
+</div> 
 <div class="mt-4"></div>
 <div *ngIf="customers.length!=0">
 <table class="table">
