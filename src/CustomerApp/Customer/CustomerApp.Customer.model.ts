@@ -6,7 +6,7 @@ import {NgForm,FormGroup, FormControl,FormBuilder, Validators} from '@angular/fo
 export class Customer {
 CustomerCode:string= "";
 CustomerName:string="";
-CustomerAmount:number=0;
+CustomerAmount:number;
 customerFormGroup:FormGroup=null;
 constructor(){
  let builder = new FormBuilder();
@@ -16,7 +16,7 @@ constructor(){
  //Multiple Validation
  let customerCodeValidator = [];
  customerCodeValidator.push(Validators.required);
- customerCodeValidator.push(Validators.pattern("^[0-9]{2,4}$"));
+ customerCodeValidator.push(Validators.pattern("^[0-9]{1,4}$"));
  this.customerFormGroup.addControl("CustomerCodeControl", new FormControl('',Validators.compose(customerCodeValidator)));
 }
 }

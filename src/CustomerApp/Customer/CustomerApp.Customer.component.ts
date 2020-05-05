@@ -5,7 +5,6 @@ import {Customer} from './CustomerApp.Customer.model';
   templateUrl: './CustomerApp.Customer.view.html'
 })
 export class CustomerComponent {
-  title = 'Customer Application';
   customer:Customer= new Customer();
   customers:Array<Customer>= new Array<Customer>();
   Add(){

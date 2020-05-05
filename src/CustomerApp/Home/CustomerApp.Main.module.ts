@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import { MainRoutes } from '../Routing/CustomerApp.MainRouting';
 import {RouterModule} from '@angular/router';
-import { MasterPageComponent } from './CustomerApp.MasterPage.component';
 import { HomeComponent } from './CustomerApp.Home.component';
+import { AboutComponent } from './CustomerApp.About.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    MasterPageComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +19,6 @@ import { HomeComponent } from './CustomerApp.Home.component';
     RouterModule.forRoot(MainRoutes)
   ],
   providers: [],
-  bootstrap: [MasterPageComponent]
+  bootstrap: [HomeComponent]
 })
 export class MainModule { }
