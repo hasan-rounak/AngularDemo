@@ -14,4 +14,8 @@ export class CustomerComponent {
   HasError(validatorType:string,controlName:string) : boolean{
     return this.customer.customerFormGroup.controls[controlName].hasError(validatorType);
   }
+  DeleteCustomer(item:Customer)
+  {
+this.customers=this.customers.filter(x=>x!=item);
+  }
 }
