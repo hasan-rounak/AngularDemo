@@ -20,3 +20,9 @@ constructor(){
  this.customerFormGroup.addControl("CustomerCodeControl", new FormControl('',Validators.compose(customerCodeValidator)));
 }
 }
+
+export class CustomerDto{
+    CustomerCode:string= "";
+    CustomerName:string="";
+    CustomerAmount:number;  
+}

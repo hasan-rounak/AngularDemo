@@ -1,0 +1,28 @@
+{
+  "Customer": [
+    {
+      "CustomerName": "Rounak",
+      "CustomerCode": "2",
+      "CustomerAmount": "12",
+      "id": 14
+    },
+    {
+      "CustomerName": "Bikram",
+      "CustomerCode": "7",
+      "CustomerAmount": "13",
+      "id": 15
+    },
+    {
+      "CustomerName": "Pritom",
+      "CustomerCode": "26",
+      "CustomerAmount": "34",
+      "id": 16
+    },
+    {
+      "CustomerName": "Budhha",
+      "CustomerCode": "6",
+      "CustomerAmount": "123",
+      "id": 17
+    }
+  ]
+}
