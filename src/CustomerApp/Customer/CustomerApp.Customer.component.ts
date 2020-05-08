@@ -13,6 +13,7 @@ export class CustomerComponent implements OnInit {
   }
   customer: Customer = new Customer();
   customers: Array<Customer> = new Array<Customer>();
+  loading:boolean =false;
   Add() {
     this.SaveCustomer();
     //  this.customers.push(this.customer);
@@ -28,11 +29,22 @@ export class CustomerComponent implements OnInit {
   }
 
   SaveCustomer() {
+    this.loading=true;
     let cust = new CustomerDto();
     cust.CustomerName = this.customer.CustomerName,
       cust.CustomerCode = this.customer.CustomerCode,
       cust.CustomerAmount = this.customer.CustomerAmount
-    this.customerService.SaveCustomer(cust).subscribe(res => this.GetCustomers() , err => console.log(err) );
+    this.customerService.SaveCustomer(cust).subscribe(res => 
+      {
+        this.GetCustomers();
+        this.customer=new Customer();
+        this.loading=false;
+      } 
+      , err => 
+      {
+        console.log(err) ;
+        this.loading=false;
+      });
   }
 
   GetCustomers() {

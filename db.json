@@ -23,6 +23,12 @@
       "CustomerCode": "6",
       "CustomerAmount": "123",
       "id": 17
+    },
+    {
+      "CustomerCode": "45",
+      "CustomerName": "Som",
+      "CustomerAmount": "321",
+      "id": 18
     }
   ]
 }

@@ -16,7 +16,7 @@
         <input class="form-control" [(ngModel)]="customer.CustomerAmount" [ngModelOptions]="{standalone: true}" type="text" id="CustomerAmount"/>
       </div>
  
-  <button type="submit" class="btn btn-primary" (click)="Add()" [disabled]="!(customer.customerFormGroup.valid)">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="Add()" [disabled]="!(customer.customerFormGroup.valid)||loading">Submit</button>
 </form>
 <div class="mt-4"></div>
  <div *ngIf="customer.customerFormGroup.controls['CustomerCodeControl'].dirty"

@@ -22,5 +22,9 @@ export class GridComponent {
   Delete(item: object) {
     this.eventEmitter.emit(item);
   }
+
+  FormatHeader(headerItem:string):string{
+    return headerItem.replace(/([a-z])([A-Z])/g, '$1 $2');
+  }
   
   }

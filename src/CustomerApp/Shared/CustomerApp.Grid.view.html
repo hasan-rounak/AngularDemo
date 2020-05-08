@@ -1,8 +1,8 @@
 <table class="table">
-    <thead class="thead-light">
+    <thead class="thead-dark">
       <tr>
         <th scope="col" *ngFor="let col of gridColumns">
-         {{col.colName}}
+         {{FormatHeader(col.colName)}}
         </th>
         <th></th>
       </tr>
