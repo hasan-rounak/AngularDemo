@@ -1,1 +1,24 @@
 <h5>This is Supplier Component</h5>
+<form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+    <div class="form-group">
+        <label>Supplier Code:</label>
+        <input type="text" class="form-control"  placeholder="Enter Code" formControlName = "SupplierCode">
+    </div>
+
+    <div class="form-group">
+        <label>Supplier Name:</label>
+        <input type="text" class="form-control"  placeholder="Enter Name" formControlName = "SupplierName">
+    </div>
+    <div class="form-group">
+        <label>Supplier Quantity:</label>
+        <input type="text" class="form-control"  placeholder="Enter Quantity" formControlName = "SupplierQuantity">
+    </div>
+    <div class="form-group">
+        <label>Supply Date:</label>
+        <input type="text" class="form-control"  placeholder="Enter Date" formControlName = "SupplierDate">
+    </div>
+    <input type = "submit" class="btn btn-primary" [disabled] = "!formdata.valid" value = "Save"> 
+</form>
+<grid-ui [grid-data]="suppliers">
+
+</grid-ui>
